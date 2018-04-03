@@ -51,7 +51,7 @@ module Kaamelott =
     }
 
     let private sounds = 
-        JsonProvider<"./sounds/sounds.json">.Load("./sounds/sounds.json")
+        JsonProvider<"sounds.json">.Load("sounds.json")
             |> Seq.map (fun sound -> { Filename = sound.File; Description = sound.Title })
             |> List.ofSeq
     
@@ -163,6 +163,7 @@ module Slack =
         }  
         
     let postFileInSlackChannel (accessToken: string) (channel: string) (comment: string) (filepath: string) = async {
+        ServicePointManager.ServerCertificateValidationCallback <- (fun _ _ _ _ -> true)
         use file = new FileStream(filepath,FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
         let response = 
             "https://slack.com/api/files.upload"
@@ -208,7 +209,7 @@ module Handlers =
 
             createActionResponse() |> toJson <| ctx
 
-let port = 8080
+let port = int (Environment.GetEnvironmentVariable("PORT"))
 let accessToken = Environment.GetEnvironmentVariable("ACCESSTOKEN")
 let verificationToken = Environment.GetEnvironmentVariable("VERIFICATIONTOKEN")
 
