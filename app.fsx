@@ -51,6 +51,9 @@ module Kaamelott =
         Description: string
     }
 
+    // https://github.com/fsharp/fsharp/issues/652
+    let x = { Filename = "sound.File"; Description = "sound.Title" }
+
     let private sounds = 
         JsonProvider<"sounds/sounds.json">.Load("sounds/sounds.json")
             |> Seq.map (fun sound -> { Filename = sound.File; Description = sound.Title })
