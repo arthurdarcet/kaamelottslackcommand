@@ -1,8 +1,8 @@
-#r "../packages/Suave/lib/net40/Suave.dll"
-#r "../packages/Newtonsoft.Json/lib/net45/Newtonsoft.Json.dll"
-#r "../packages/FSharp.Data/lib/net40/FSharp.Data.dll"
-#r "../packages/Flurl/lib/netstandard1.4/Flurl.dll"
-#r "../packages/Flurl.Http/lib/net45/Flurl.Http.dll"
+#r "packages/Suave/lib/net40/Suave.dll"
+#r "packages/Newtonsoft.Json/lib/net45/Newtonsoft.Json.dll"
+#r "packages/FSharp.Data/lib/net40/FSharp.Data.dll"
+#r "packages/Flurl/lib/netstandard1.4/Flurl.dll"
+#r "packages/Flurl.Http/lib/net45/Flurl.Http.dll"
 #r "System.Net.Http.dll"
 
 open System
