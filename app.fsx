@@ -7,6 +7,7 @@
 
 open System
 open System.IO
+open System.Net
 
 open Suave
 open Suave.Filters
