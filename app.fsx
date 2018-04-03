@@ -52,7 +52,7 @@ module Kaamelott =
     }
 
     let private sounds = 
-        JsonProvider<"sounds.json">.Load("sounds.json")
+        JsonProvider<"sounds/sounds.json">.Load("sounds/sounds.json")
             |> Seq.map (fun sound -> { Filename = sound.File; Description = sound.Title })
             |> List.ofSeq
     
