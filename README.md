@@ -6,15 +6,6 @@ Slack command to send kaamelott soundtracks.
 
 ## Technical Instructions
 
-### Requirements
-- F# 
+You can deploy this to Heroku by clicking this button:
 
-### Run
-
-```
-$env:ACCESSTOKEN="yourslackaccesstoken"
-$env:VERIFICATIONTOKEN="yourslackverificationtoken"
-.\paket\paket.bootstrapper.exe
-.\paket\paket.exe restore
-fsi.exe .\src\app.fsx
-```
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)

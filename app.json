@@ -1,0 +1,10 @@
+{
+  "name": "Kaamelott slack command",
+  "description": "Search and send Kaamelott soundtrack in Slack.",
+  "website": "https://github.com/MiKaDoO/kaamelottslackcommand",
+  "repository": "https://github.com/MiKaDoO/kaamelottslackcommand",
+  "logo": "https://github.com/MiKaDoO/kaamelottslackcommand/raw/master/arthur.png",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/SuaveIO/mono-script-buildpack.git"
+  }
+}
